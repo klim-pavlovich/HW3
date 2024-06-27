@@ -13,6 +13,22 @@
 
 body {
 	overflow-x: hidden;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	align-items: center;
+}
+
+header,
+footer,
+main {
+	width: 100%;
+	display: flex;
+}
+
+.header {
+	justify-content: space-between;
 }
 
 h1,
@@ -22,15 +38,19 @@ p {
 	font-family: Inter;
 }
 
-.navigation_container {
+.container {
+	max-width: 1174px;
+	width: 100%;
+}
+
+.navigation {
 	margin-top: 40px;
 	margin-bottom: 84px;
-	margin-left: 20%;
-	margin-right: 20%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 24%;
+	width: 100%;
 }
 
 .menuLinks {
@@ -61,20 +81,20 @@ p {
 	align-self: stretch;
 }
 
-.mainContentContainer {
-	margin-left: 20%;
-	margin-right: 20%;
+.mainContent {
 	margin-bottom: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 73px;
 }
 
-.mainContentContainer__leftSide {
+.mainContent__leftSide {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 32px;
+	max-width: 556px;
 }
 
 .mainContent__leftSide-btnList {
@@ -84,7 +104,7 @@ p {
 	align-self: stretch;
 }
 
-.mainContentContainer__leftSide-filledBtn {
+.mainContent__leftSide-filledBtn {
 	border-radius: 56px;
 	background: #f25822;
 	box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.2);
@@ -98,7 +118,7 @@ p {
 	cursor: pointer;
 }
 
-.mainContentContainer__leftSide-unfilledBtn {
+.mainContent__leftSide-unfilledBtn {
 	color: #aaa;
 	font-size: 16px;
 	font-weight: 600;
@@ -107,12 +127,10 @@ p {
 	cursor: pointer;
 }
 
-.logosContainer {
+.logos {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 0, 025%;
-	margin-left: 20%;
-	margin-right: 20%;
+	gap: 48px;
 	margin-bottom: 100px;
 }
