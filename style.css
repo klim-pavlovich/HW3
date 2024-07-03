@@ -9,6 +9,7 @@
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
+	box-sizing: border-box;
 }
 
 body {
@@ -18,22 +19,24 @@ body {
 	flex-direction: column;
 	height: 100vh;
 	align-items: center;
+	margin: 0;
 }
 
-header,
-footer,
 main {
 	width: 100%;
-	display: flex;
 }
 
-.header {
+header {
+	width: 100%;
+	display: flex;
 	justify-content: space-between;
 }
 
 h1,
+h2,
 a,
-p {
+p,
+button {
 	color: #000;
 	font-family: Inter;
 }
@@ -41,15 +44,19 @@ p {
 .container {
 	max-width: 1174px;
 	width: 100%;
+	padding: 100px 0;
+	margin: 0 auto;
+	/* display: flex;
+	justify-content: center; */
 }
 
 .navigation {
-	margin-top: 40px;
-	margin-bottom: 84px;
+	padding-top: 40px;
+	padding-bottom: 84px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 24%;
+	gap: 460px;
 	width: 100%;
 }
 
@@ -69,7 +76,6 @@ h1 {
 	line-height: 120%; /* 72px */
 	font-size: 60px;
 	font-weight: 700;
-	margin-bottom: 20px;
 	align-self: stretch;
 }
 p {
@@ -81,12 +87,12 @@ p {
 	align-self: stretch;
 }
 
-.mainContent {
-	margin-bottom: 100px;
+.mainContentSection {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 73px;
+	padding-top: 0px;
 }
 
 .mainContent__leftSide {
@@ -104,7 +110,7 @@ p {
 	align-self: stretch;
 }
 
-.mainContent__leftSide-filledBtn {
+.filledBtn {
 	border-radius: 56px;
 	background: #f25822;
 	box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.2);
@@ -118,7 +124,7 @@ p {
 	cursor: pointer;
 }
 
-.mainContent__leftSide-unfilledBtn {
+.unfilledBtn {
 	color: #aaa;
 	font-size: 16px;
 	font-weight: 600;
@@ -132,5 +138,102 @@ p {
 	justify-content: space-between;
 	align-items: center;
 	gap: 48px;
-	margin-bottom: 100px;
+	/* margin-bottom: 100px; */
+}
+
+.smallCardList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 28px;
+}
+
+.smallCard {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+	gap: 25px;
+	padding: 40px 30px;
+}
+
+.smallCard {
+	line-height: 150%;
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+.smallCard p,
+h2,
+img,
+button {
+	margin: 0;
+}
+
+.cardBordered {
+	box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+}
+
+.servicesTitle {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	align-items: center;
+}
+
+.bigCardsSection {
+	background: #fafafa;
+}
+
+.bigCards {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	gap: 48px;
+}
+
+.bigCardList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	gap: 25px;
+}
+
+.bigCard {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.downBlock {
+	padding: 0px 34px 34px 34px;
+}
+
+.downBlock h2 {
+	margin-bottom: 16px;
+}
+
+.downBlock p {
+	margin-bottom: 24px;
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.servicesTitle p {
+	font-size: 16px;
+	margin-bottom: 0px;
+	margin-left: 217px;
+	margin-right: 217px;
+}
+
+.cardShadowed {
+	background: #fff;
+	box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+}
+
+.unfilledBtn-smallCards {
+	color: #000;
 }
